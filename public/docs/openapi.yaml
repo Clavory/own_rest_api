@@ -1,0 +1,496 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/user:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/products:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products:
+                    -
+                      id: 1
+                      title: 'Akko CS Mechanical Switch Keyboard Replacement 45 pcs (Silver Switch)'
+                      description: 'Sample Switch Description'
+                      currency: PHP
+                      price: 675
+                      brand: Akko
+                      category: switches
+                      image: 'https://cdn.shopify.com/s/files/1/0355/8296/7943/products/51s9X8zxiEL._AC_SL1500_400x.jpg?v=1643677003'
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 2
+                      title: 'Akko 3068S Shine-Through RGB Hot-Swappable Mechanical Keyboard Black (Akko CS Jelly Pink)'
+                      description: 'Sample Keyboard Description'
+                      currency: PHP
+                      price: 3590
+                      brand: Akko
+                      category: keyboard
+                      image: 'https://cdn.shopify.com/s/files/1/0355/8296/7943/products/3068ST-jelly-pink-6925758619387_500x.jpg?v=1658310259'
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 3
+                      title: 'Akko Blue On White Full Keycaps Set ASA 197 Keys'
+                      description: 'Sample Keycaps Description'
+                      currency: PHP
+                      price: 2450
+                      brand: Akko
+                      category: keycaps
+                      image: 'https://cdn.shopify.com/s/files/1/0355/8296/7943/products/ASA-_-1_1800x1800_6b92405f-fdc3-4a4a-bb19-27525ca262f3_400x.jpg?v=1647390039'
+                      created_at: null
+                      updated_at: null
+                properties:
+                  products:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'Akko CS Mechanical Switch Keyboard Replacement 45 pcs (Silver Switch)'
+                        description: 'Sample Switch Description'
+                        currency: PHP
+                        price: 675
+                        brand: Akko
+                        category: switches
+                        image: 'https://cdn.shopify.com/s/files/1/0355/8296/7943/products/51s9X8zxiEL._AC_SL1500_400x.jpg?v=1643677003'
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 2
+                        title: 'Akko 3068S Shine-Through RGB Hot-Swappable Mechanical Keyboard Black (Akko CS Jelly Pink)'
+                        description: 'Sample Keyboard Description'
+                        currency: PHP
+                        price: 3590
+                        brand: Akko
+                        category: keyboard
+                        image: 'https://cdn.shopify.com/s/files/1/0355/8296/7943/products/3068ST-jelly-pink-6925758619387_500x.jpg?v=1658310259'
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 3
+                        title: 'Akko Blue On White Full Keycaps Set ASA 197 Keys'
+                        description: 'Sample Keycaps Description'
+                        currency: PHP
+                        price: 2450
+                        brand: Akko
+                        category: keycaps
+                        image: 'https://cdn.shopify.com/s/files/1/0355/8296/7943/products/ASA-_-1_1800x1800_6b92405f-fdc3-4a4a-bb19-27525ca262f3_400x.jpg?v=1647390039'
+                        created_at: null
+                        updated_at: null
+                    items:
+                      type: object
+      tags:
+        - Endpoints
+      security: []
+  '/api/products/{product_id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products:
+                    id: 1
+                    title: 'Akko CS Mechanical Switch Keyboard Replacement 45 pcs (Silver Switch)'
+                    description: 'Sample Switch Description'
+                    currency: PHP
+                    price: 675
+                    brand: Akko
+                    category: switches
+                    image: 'https://cdn.shopify.com/s/files/1/0355/8296/7943/products/51s9X8zxiEL._AC_SL1500_400x.jpg?v=1643677003'
+                    created_at: null
+                    updated_at: null
+                properties:
+                  products:
+                    type: object
+                    example:
+                      id: 1
+                      title: 'Akko CS Mechanical Switch Keyboard Replacement 45 pcs (Silver Switch)'
+                      description: 'Sample Switch Description'
+                      currency: PHP
+                      price: 675
+                      brand: Akko
+                      category: switches
+                      image: 'https://cdn.shopify.com/s/files/1/0355/8296/7943/products/51s9X8zxiEL._AC_SL1500_400x.jpg?v=1643677003'
+                      created_at: null
+                      updated_at: null
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: repellat
+                description:
+                  type: string
+                  description: ''
+                  example: totam
+                currency:
+                  type: string
+                  description: ''
+                  example: sapiente
+                price:
+                  type: string
+                  description: ''
+                  example: quo
+                brand:
+                  type: string
+                  description: ''
+                  example: sunt
+                category:
+                  type: string
+                  description: ''
+                  example: porro
+                image:
+                  type: string
+                  description: ''
+                  example: quis
+              required:
+                - title
+                - description
+                - currency
+                - price
+                - brand
+                - category
+                - image
+      security: []
+    delete:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: product_id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/products/search/{keywords}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products: []
+                properties:
+                  products:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: keywords
+        description: ''
+        example: maiores
+        required: true
+        schema:
+          type: string
+  /api/products/category/categories:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  categories:
+                    - switches
+                    - keyboard
+                    - keycaps
+                properties:
+                  categories:
+                    type: array
+                    example:
+                      - switches
+                      - keyboard
+                      - keycaps
+                    items:
+                      type: string
+      tags:
+        - Endpoints
+      security: []
+  '/api/products/category/{category_name}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: category_name
+        description: ''
+        example: magni
+        required: true
+        schema:
+          type: string
+  /api/products/add:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: cupiditate
+                description:
+                  type: string
+                  description: ''
+                  example: et
+                currency:
+                  type: string
+                  description: ''
+                  example: nobis
+                price:
+                  type: string
+                  description: ''
+                  example: omnis
+                brand:
+                  type: string
+                  description: ''
+                  example: rerum
+                category:
+                  type: string
+                  description: ''
+                  example: quia
+                image:
+                  type: string
+                  description: ''
+                  example: ab
+              required:
+                - title
+                - description
+                - currency
+                - price
+                - brand
+                - category
+                - image
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''

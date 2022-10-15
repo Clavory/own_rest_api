@@ -1,0 +1,489 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/user
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/products
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"products":[{"id":1,"title":"Akko CS Mechanical Switch Keyboard Replacement 45 pcs (Silver Switch)","description":"Sample Switch Description","currency":"PHP","price":675,"brand":"Akko","category":"switches","image":"https:\/\/cdn.shopify.com\/s\/files\/1\/0355\/8296\/7943\/products\/51s9X8zxiEL._AC_SL1500_400x.jpg?v=1643677003","created_at":null,"updated_at":null},{"id":2,"title":"Akko 3068S Shine-Through RGB Hot-Swappable Mechanical Keyboard Black (Akko CS Jelly Pink)","description":"Sample Keyboard Description","currency":"PHP","price":3590,"brand":"Akko","category":"keyboard","image":"https:\/\/cdn.shopify.com\/s\/files\/1\/0355\/8296\/7943\/products\/3068ST-jelly-pink-6925758619387_500x.jpg?v=1658310259","created_at":null,"updated_at":null},{"id":3,"title":"Akko Blue On White Full Keycaps Set ASA 197 Keys","description":"Sample Keycaps Description","currency":"PHP","price":2450,"brand":"Akko","category":"keycaps","image":"https:\/\/cdn.shopify.com\/s\/files\/1\/0355\/8296\/7943\/products\/ASA-_-1_1800x1800_6b92405f-fdc3-4a4a-bb19-27525ca262f3_400x.jpg?v=1647390039","created_at":null,"updated_at":null}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/products/{product_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product_id:
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      product_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"products":{"id":1,"title":"Akko CS Mechanical Switch Keyboard Replacement 45 pcs (Silver Switch)","description":"Sample Switch Description","currency":"PHP","price":675,"brand":"Akko","category":"switches","image":"https:\/\/cdn.shopify.com\/s\/files\/1\/0355\/8296\/7943\/products\/51s9X8zxiEL._AC_SL1500_400x.jpg?v=1643677003","created_at":null,"updated_at":null}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '55'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/products/search/{keywords}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      keywords:
+        name: keywords
+        description: ''
+        required: true
+        example: maiores
+        type: string
+        custom: []
+    cleanUrlParameters:
+      keywords: maiores
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"products":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '54'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/products/category/categories
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"categories":["switches","keyboard","keycaps"]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '53'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/products/category/{category_name}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      category_name:
+        name: category_name
+        description: ''
+        required: true
+        example: magni
+        type: string
+        custom: []
+    cleanUrlParameters:
+      category_name: magni
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '[]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '52'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/products/add
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: cupiditate
+        type: string
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      currency:
+        name: currency
+        description: ''
+        required: true
+        example: nobis
+        type: string
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: omnis
+        type: string
+        custom: []
+      brand:
+        name: brand
+        description: ''
+        required: true
+        example: rerum
+        type: string
+        custom: []
+      category:
+        name: category
+        description: ''
+        required: true
+        example: quia
+        type: string
+        custom: []
+      image:
+        name: image
+        description: ''
+        required: true
+        example: ab
+        type: string
+        custom: []
+    cleanBodyParameters:
+      title: cupiditate
+      description: et
+      currency: nobis
+      price: omnis
+      brand: rerum
+      category: quia
+      image: ab
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/products/{product_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product_id:
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      product_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: repellat
+        type: string
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: totam
+        type: string
+        custom: []
+      currency:
+        name: currency
+        description: ''
+        required: true
+        example: sapiente
+        type: string
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: quo
+        type: string
+        custom: []
+      brand:
+        name: brand
+        description: ''
+        required: true
+        example: sunt
+        type: string
+        custom: []
+      category:
+        name: category
+        description: ''
+        required: true
+        example: porro
+        type: string
+        custom: []
+      image:
+        name: image
+        description: ''
+        required: true
+        example: quis
+        type: string
+        custom: []
+    cleanBodyParameters:
+      title: repellat
+      description: totam
+      currency: sapiente
+      price: quo
+      brand: sunt
+      category: porro
+      image: quis
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/products/{product_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product_id:
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      product_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
